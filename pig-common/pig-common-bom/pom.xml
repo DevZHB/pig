@@ -36,6 +36,7 @@
         <hutool.version>5.8.19</hutool.version>
         <mica.version>2.7.4</mica.version>
         <sentinel.version>1.8.4</sentinel.version>
+		<weixin-java.version>4.5.0</weixin-java.version>
     </properties>
 
     <!-- 定义全局jar版本,模块使用需要再次引入但不用写版本号-->
@@ -184,6 +185,12 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+			<!--微信公众号（订阅号服务号）开发类-->
+			<dependency>
+				<groupId>com.github.binarywang</groupId>
+				<artifactId>wx-java-mp-spring-boot-starter</artifactId>
+				<version>${weixin-java.version}</version>
+			</dependency>
             <!--web 模块-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
