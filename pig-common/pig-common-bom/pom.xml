@@ -37,6 +37,8 @@
         <mica.version>2.7.4</mica.version>
         <sentinel.version>1.8.4</sentinel.version>
 		<weixin-java.version>4.5.0</weixin-java.version>
+		<mapstruct.version>1.5.5.Final</mapstruct.version>
+		<guava.version>32.0.1-jre</guava.version>
     </properties>
 
     <!-- 定义全局jar版本,模块使用需要再次引入但不用写版本号-->
@@ -169,6 +171,29 @@
                 <artifactId>mybatis-plus-annotation</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<!-- use mapstruct-jdk8 for Java 8 or higher -->
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-jdk8</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-processor</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
             <!--hutool bom 工具类-->
             <dependency>
                 <groupId>cn.hutool</groupId>
